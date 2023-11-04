@@ -6,6 +6,9 @@ public class HitObject : MonoBehaviour
 {
     void OnCollisionEnter(Collision other)
     {
-        GetComponent<MeshRenderer>().material.color = Color.red;
+        if (other.gameObject.tag.Equals("Player"))
+        {
+            GetComponent<MeshRenderer>().material.color = Color.red;
+        }
     }
 }
